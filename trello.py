@@ -2,14 +2,16 @@ import sys
 import requests
 
 # Данные авторизации в API Trello
+# Необходимо заполнить свои данные key и token
 auth_params = {
-    'key': "18f037e46d0662f6280b2634b1547aa1",
-    'token': "92d92feca887b88f793d12a311745c6310c05e74efe52e71c63cf5213603bada", }
+    'key': "___",
+    'token': "___", }
 
 
-# Адрес, на котором расположен API Trello, # Именно туда мы будем отправлять HTTP запросы.
+# Адрес, на котором расположен API Trello, туда будем отправлять HTTP запросы.
 base_url = "https://api.trello.com/1/{}"
-board_id = "3MxML0oO"
+# Необхиодимо заполнить board_id для вашей доски
+board_id = "___"
 
 
 def read():
