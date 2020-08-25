@@ -64,7 +64,7 @@ def move(name, column_name):
             print("Порядковый номер: {}. Идентификатор - {}, расположена в колонке {}.".format(i, task['id'], task['column']))
 
         task_index = int(input("Введите порядковый номер задачи которую хотите перенсти в колонку \"{}\": ".format(column_name)))
-        while int(task_index) > len(tasks) or int(task_index) < 0:
+        while len(tasks) - 1 < int(task_index) or int(task_index) < 0:
             task_index = int(input("Вы ввели не корректный номер задачи. Попробуйте еще раз: "))
 
         task_id = tasks[task_index]['id']
