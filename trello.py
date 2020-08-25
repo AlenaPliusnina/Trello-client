@@ -29,8 +29,8 @@ def read():
         if not task_data:
             print('\t' + 'Нет задач!')
             continue
-        for task in task_data:
-            print('\t' + task['name'])
+        for i, task in enumerate(task_data):
+            print('\t' + str(i + 1) + " - " + task['name'])
 
 
 def create(name, column_name):
