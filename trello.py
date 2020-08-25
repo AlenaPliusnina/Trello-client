@@ -56,8 +56,7 @@ def move(name, column_name):
         for task in column_tasks:
             if task['name'] == name:
                 tasks.append({'id': task['id'], 'idShort': task['idShort'], 'idList': task['idList'], 'column': get_column_name(column['name'])})
-    
-    # Если найдено больше одной задачи с именем name, предлагаем пользователю выбрать ту с которой он хочет работать
+
     if len(tasks) > 1:
         print("Найдено несколько задач с именем \"{}\":".format(name))
         for i, task in enumerate(tasks):
@@ -68,8 +67,10 @@ def move(name, column_name):
             task_index = int(input("Вы ввели не корректный номер задачи. Попробуйте еще раз: "))
 
         task_id = tasks[task_index]['id']
+        task_column_name = tasks[task_index]['column']
     else:
         task_id = tasks[0]['id']
+        task_column_name = tasks[0]['column']
 
     # Теперь, когда у нас есть id задачи, которую мы хотим переместить
     # Переберём данные обо всех колонках, пока не найдём ту, в которую мы будем перемещать задачу
@@ -78,6 +79,7 @@ def move(name, column_name):
             # И выполним запрос к API для перемещения задачи в нужную колонку
             requests.put(base_url.format('cards') + '/' + task_id + '/idList',
                          data={'value': column['id'], **auth_params})
+            print("Задача \"{}\" с id = {} перемещена из колонки \"{}\" в колонку \"{}\".".format(name, task_id, task_column_name, column_name))
             break
 
 
