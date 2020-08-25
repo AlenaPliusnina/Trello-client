@@ -122,9 +122,9 @@ def get_column_name(name):
     return new_name[1:]
 
 
-# Функция добавления новой колонки 
-def add_column(name):
-    requests.post(base_url.format('boards') + '/' + board_id + '/lists', params={'name': name, **auth_params})
+# Функция добавления новой колонки
+def add_column(column_name):
+    requests.post(base_url.format('boards') + '/' + board_id + '/lists', params={'name': column_name, **auth_params})
 
 
 if __name__ == "__main__":
