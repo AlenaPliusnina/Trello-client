@@ -15,7 +15,7 @@ board_id = "___"
 
 
 def read():
-    # Обновляем счетсик задач в названии колонок
+    # Обновляем счетчик задач в названии колонок
     add_counter()
     # Получим данные всех колонок на доске:
     column_data = requests.get(base_url.format('boards') + '/' + board_id + '/lists', params=auth_params).json()
@@ -56,7 +56,8 @@ def move(name, column_name):
         for task in column_tasks:
             if task['name'] == name:
                 tasks.append({'id': task['id'], 'idShort': task['idShort'], 'idList': task['idList'], 'column': get_column_name(column['name'])})
-
+    
+    # Если найдено больше одной задачи с именем name, предлагаем пользователю выбрать ту с которой он хочет работать
     if len(tasks) > 1:
         print("Найдено несколько задач с именем \"{}\":".format(name))
         for i, task in enumerate(tasks):
