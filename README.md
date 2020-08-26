@@ -3,7 +3,7 @@
 Для работы приложения в файле trello.py необходимо заполнить поля key, token, board_id своими значениями.
 
 Консольные команды для работы с приложением:
-1. Чтобы отобразить все колонки и задачи в них - python3 trello.py
-2. Добавить новую задачу в колонку: python3 trello.py create "name" "column_name" (где name - название задачи, column_name - название колонки)
-3. Создать новую калонку: python3 trello.py add_column "column_name"  (где column_name - название колонки)
-4. Переместить задачу из одной колонки в другую: python3 trello.py move "name" "column_name" (где name - название задачи которую хотите пернести, column_name - название колонки в которую будет перенесена задача)
+1. Чтобы отобразить все колонки и задачи в них - python trello.py
+2. Добавить новую задачу в колонку: python trello.py create "name" "column_name" (где name - название задачи, column_name - название колонки)
+3. Создать новую калонку: python trello.py add_column "column_name"  (где column_name - название колонки)
+4. Переместить задачу из одной колонки в другую: python trello.py move "name" "column_name" (где name - название задачи которую хотите пернести, column_name - название колонки в которую будет перенесена задача)
