@@ -26,7 +26,7 @@
 
 ![Получение задач trello в консоли](https://github.com/AlenaPliusnina/Trello-client/blob/master/screenshots/screen_2.png)
 
-Добавление новой задачи через консоль показано на скриншоте ниже
+Добавление новой задачи через консоль показано на скриншоте ниже (добавляем задачу "test" в карточку "Спорт")
 
 ![Добавление новой задачи trello в консоли](https://github.com/AlenaPliusnina/Trello-client/blob/master/screenshots/screen_3.png)
 
@@ -34,7 +34,7 @@
 
 ![Добавление новой задачи trello на сайте](https://github.com/AlenaPliusnina/Trello-client/blob/master/screenshots/screen_4.png)
 
-Также при помощи консольной команды можно перенести задачу в другую колонку (карточку)
+Также при помощи консольной команды можно перенести задачу в другую колонку/карточку (переносим задачу "test" в карточку "Домашние дела")
 
 ![Перенос задачи trello в консоли](https://github.com/AlenaPliusnina/Trello-client/blob/master/screenshots/screen_5.png)
 
